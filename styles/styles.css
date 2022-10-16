@@ -115,7 +115,6 @@ h2 {
 }
 .heading-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/siyuan-g_V2rt6iG7A-unsplash.jpg");
-    background-attachment: fixed;
 }
 .hero-image {
     height: 500px;
@@ -258,6 +257,9 @@ footer h3 {
         flex-flow: row;
         justify-content: space-around;
         text-align: left;
+    }
+    .heading-image {
+        background-attachment: fixed;
     }
     .section-side-right {
         flex-flow: row;

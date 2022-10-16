@@ -1,0 +1,89 @@
+<html lang="nb">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Home</title>
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header id="top">
+            <!-- Navigation Menu -->
+            <div id="booking-image" class="background-fixed hero-image">
+                <nav id="nav-bar">
+                    
+                    <!-- Overlay menu section -->
+                    <div id="nav-menu-overlay" class="nav-menu-overlay">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <ul class="nav-menu">
+                            <a href="index.html"><li>Home</li></a>
+                            <a href="menu.html"><li>Menu</li></a>
+                            <a href="reservations.html"><li class="active">Reservations</li></a>
+                            <a href="accessibility.html"><li>Accessibility</li></a>
+                            <a href="topical.html"><li>Topical</li></a>
+                        </ul>
+                    </div>
+
+                    <!-- Logo -->
+                    <a href="index.html"><div id="logo"></div></a>
+                    
+                    <!-- Burger icon -->
+                    <a href="javascript:void(0);" class="icon" onclick="openNav()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </nav>
+                <div class="hero-text">
+                    <p>Get ready to be swept away.</p>
+                    <h1>New Wave</h1>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+
+            <!-- Section 1 -->
+            <section class="section-dark">
+                <h2>Occations</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque porro, molestiae rem dolorem ratione, maiores iure at quibusdam animi tenetur provident veritatis nemo dolor laboriosam eligendi magni nihil accusantium quae.</p>
+            </section>
+            
+            <!-- Section 2 -->
+            <section class="section-light">
+                <h2>This Is Us</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nam omnis ipsum excepturi consequuntur odit, tempora alias enim. At ad facilis quae dicta mollitia repudiandae expedita nisi labore ea sed. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quam non commodi asperiores, pariatur aliquam minus incidunt, qui, placeat ipsam deleniti harum tempora perspiciatis! Dolor saepe mollitia quia eveniet explicabo.</p>
+            </section>
+
+
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-item">
+                <h3>Contact Us</h3>
+                <p>Waldemars Hage 4<br>0175 Oslo</p>
+                <p>kw.abrahamsen@icloud.com<br>90 21 20 80</p>
+            </div>
+            <div class="footer-item">
+                <h3>Opening Hours</h3>
+                <p>Sun - Wed: 12.00-00.00<br>Thu - Sat: 12.00-03.00</p>
+            </div>
+            <div id="to-top">
+                <a href="#top">To Top</a>
+            </div>
+        </footer>
+        <script>
+            function openNav() {
+                document.getElementById("nav-menu-overlay").style.width = "100%";
+            }
+
+            function closeNav() {
+                document.getElementById("nav-menu-overlay").style.width = "0%";
+            }
+        </script>
+    </body>
+</html>

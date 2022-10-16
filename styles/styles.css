@@ -20,8 +20,8 @@ h1 {
 nav {
     display: flex;
     flex-flow: column;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
     padding-top: 20px;
     padding-bottom: 50px;
 }

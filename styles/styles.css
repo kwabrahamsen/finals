@@ -18,10 +18,6 @@ a:hover {
 
 /* Navigation menu */
 #nav-bar {
-    display: flex;
-    flex-flow: row;
-    align-items: center;
-    justify-content: space-between;
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 50px;
@@ -62,6 +58,7 @@ a:hover {
     color: white;
     display: block;
     font-size: xx-large;
+    float: right;
 }
 .icon:hover {
     color: #ffc300;
@@ -76,7 +73,7 @@ a:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
+    float: left;
 }
 
 /* Navigation links */

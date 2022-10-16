@@ -1,12 +1,4 @@
-/*
-Index:
-- Elements
-- Classes
-- IDs
-- @media
-*/
-
-/* Elements */
+/* General styles */
 html {
     scroll-behavior: smooth;
   }
@@ -17,39 +9,102 @@ h1 {
     font-size: 3em;
     margin-top: 0;
 }
-nav {
-    display: flex;
-    flex-flow: column;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 20px;
-    padding-bottom: 50px;
+a {
+    text-decoration: none;
 }
-nav ul {
+a:hover {
+    text-decoration: none;
+}
+
+/* Navigation menu */
+#nav-bar {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+}
+.nav-menu-overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+.nav-menu-overlay a:hover, .nav-menu-overlay a:focus {
+    color: #f1f1f1;
+}
+.nav-menu-overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+.nav-menu {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
     font-size: 1.2em;
     color: white;
-    margin: 0;
+    padding-left: 0;
 }
-nav li {
+.icon {
+    color: white;
+    display: block;
+    font-size: xx-large;
+}
+.icon:hover {
+    color: #ffc300;
+}
+.icon:visited {
+    color: white;
+}
+#logo {
+    background-image: url("../img/logo.png");
+    height: 40px;
+    width: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* Navigation links */
+.nav-menu-overlay a, .nav-menu-overlay li {
     list-style-type: none;
     padding: 0 5px;
     margin-bottom: 20px;
+    color: #818181;
+    transition: 0.3s;
 }
-nav li:hover {
-    border-bottom: 2px solid #ffc300;
-    margin-bottom: -2px;
+.nav-menu-overlay li {
+    color: #818181;
+    font-size: xx-large;
 }
-nav a:visited {
-    color: white;
+.nav-menu-overlay a:hover, .nav-menu-overlay li:hover {
+    color: #f1f1f1;
 }
-nav a .active {
-    border-bottom: 2px solid #ffc300;
-    margin-bottom: -2px;
-    color: white;
+.nav-menu-overlay a:visited, .nav-menu-overlay li:visited {
+    color: #818181;
 }
+.nav-menu-overlay a:focus, .nav-menu-overlay li:focus {
+    color: #f1f1f1;
+}
+.nav-menu-overlay a .active {
+    color: #f1f1f1;
+}
+
+/* Main Content */
 section {
     padding: 50px 10%;
 }
@@ -58,38 +113,10 @@ h2 {
     font-size: 2em;
     margin-top: 0;
 }
-button {
-    padding: 10px 20px;
-    margin: 10px auto;
-    border-width: 2px;
-    border-style: solid;
-    border-radius: 25px;
-    font-size: 1.2em;
-    background-color: rgba(0, 0, 0, 0.0);
+.heading-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/siyuan-g_V2rt6iG7A-unsplash.jpg");
+    background-attachment: fixed;
 }
-button:hover {
-    cursor: pointer;
-}
-footer {
-    display: flex;
-    flex-flow: column;
-    padding: 40px 10%;
-    background-color: #0C1821;
-    color: white;
-    text-align: center;
-    position: relative;
-}
-footer h3 {
-    color: #ffc300;
-}
-a {
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: none;
-}
-
-/* Classes */
 .hero-image {
     height: 500px;
     background-position: center;
@@ -137,11 +164,32 @@ a:hover {
     color: white;
 }
 .section-dark h2 {
-    color: #ffc300;
+    color: white;
+}
+#booking-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/andrew-seaman-sQopSb2K0CU-unsplash.jpg");
+}
+#menu-image {
+    background-image: url("../img/sebastian-coman-photography-dUqX2Eq-2jk-unsplash.jpg");
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    margin: 10px auto;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 25px;
+    font-size: 1.2em;
+    background-color: rgba(0, 0, 0, 0.0);
+}
+button:hover {
+    cursor: pointer;
 }
 .btn-light {
     border-color: #0C1821;
     color: #0C1821;
+    transition: 0.3s;
 }
 .btn-light:hover {
     background-color: #0C1821;
@@ -152,6 +200,7 @@ a:hover {
     background-color: white;
     border-color: white;
     color: #0C1821;
+    transition: 0.3s;
 }
 .btn-dark:hover {
     background-color: #ffc300;
@@ -159,37 +208,30 @@ a:hover {
     color: #0C1821;
 }
 
-/* IDs */
-#logo {
-    background-image: url("../img/logo.png");
-    height: 40px;
-    width: 40px;
-    margin: 10px auto 10px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+/* Footer */
+footer {
+    display: flex;
+    flex-flow: column;
+    padding: 40px 10%;
+    background-color: #0C1821;
+    color: white;
+    text-align: center;
     position: relative;
 }
-#heading-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/siyuan-g_V2rt6iG7A-unsplash.jpg");
-    background-attachment: fixed;
-}
-#booking-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/andrew-seaman-sQopSb2K0CU-unsplash.jpg");
-}
-#menu-image {
-    background-image: url("../img/sebastian-coman-photography-dUqX2Eq-2jk-unsplash.jpg");
+footer h3 {
+    color: white;
 }
 #to-top {
-    background-color: #ffc300;
+    background-color: white;
     padding: 5px 10px;
-    border-radius: 0px 0px 0px 10px;
+    border-radius: 10px 0px 0px 10px;
     position: absolute;
-    top: 0px;
+    top: 20px;
     right: 0px;
+    transition: 0.3s;
 }
 #to-top:hover {
-    background-color: white;
+    background-color: #ffc300;
 }
 #to-top a {
     color: #0C1821;
@@ -208,16 +250,6 @@ a:hover {
     }
     h2 {
         font-size: 3em;
-    }
-    nav {
-        flex-flow: row;
-        align-items: center;
-    }
-    nav ul{
-        justify-content: space-between;
-    }
-    nav li {
-        padding: 0 10px;
     }
     section {
         padding: 50px 20%;

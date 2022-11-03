@@ -123,10 +123,7 @@ h2 {
     margin-top: 0;
 }
 .heading-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/siyuan-g_V2rt6iG7A-unsplash.jpg");
-}
-.heading-image-menu {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/sebastian-coman-photography-dUqX2Eq-2jk-unsplash.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/traffic.jpg");
 }
 .hero-image {
     height: 500px;
@@ -150,12 +147,30 @@ h2 {
 section {
     padding: 50px 20%;
 }
+.featured {
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 20px 30px;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    background-color: white;
+    border-radius: 10px;
+    color: #0C1821;
+    box-shadow: 0 3px 8px 0 rgba(55, 8, 131, 0.915);
+}
 .section-light {
     background: white;
 }
 .section-dark {
     background-color: #0C1821;
     color: white;
+}
+.section-dark:first-child {
+    position: relative;
+    background: rgb(97,14,226);
+    background: linear-gradient(0deg, rgba(97,14,226,1) 0%, rgba(146,42,245,1) 100%);
+    padding-top: 200px;
 }
 .multi-column-container {
     display: flex;
@@ -170,7 +185,7 @@ section {
 --------------------------*/
 .section-scroll-snap {
     padding: 30px 0;
-    background-color: white;
+    background-color: #0C1821;
 }
 .scroll-snap-container {
     display: flex;
@@ -184,7 +199,8 @@ section {
     min-width: 400px;
     margin: 30px 30px 30px 30px;
     padding: 20px;
-    background-color: #0C1821;
+    background: rgb(97,14,226);
+    background: linear-gradient(0deg, rgba(97,14,226,1) 0%, rgba(146,42,245,1) 100%);
     color: white;
     border-radius: 10px;
     position: relative;
@@ -199,8 +215,8 @@ section {
     position: absolute;
     bottom: -20px;
     right: -20px;
-    background-color: #818181;
-    color: white;
+    background-color: white;
+    color: #0C1821;
     border-radius: 10px;
     width: 90%;
     height: 70%;
@@ -210,14 +226,47 @@ section {
     position: absolute;
     top: -20px;
     left: -20px;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     background-color: #ffc300;
     color: white;
     border-radius: 50%;
-    font-size: 4em;
+    font-size: 3em;
     font-weight: bold;
     text-align: center;
+}
+footer {
+    display: flex;
+    flex-flow: column;
+    padding: 40px 10%;
+    background-color: #0C1821;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+footer h3 {
+    color: white;
+}
+#to-top {
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 15px 0px 0px 15px;
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    transition: 0.3s;
+}
+#to-top:hover {
+    background-color: #ffc300;
+}
+#to-top a {
+    color: #0C1821;
+}
+#to-top a:hover {
+    color: #0C1821;
+}
+#to-top a:visited {
+    color: #0C1821;
 }
 /* @media */
 @media (min-width: 800px) {
@@ -250,7 +299,7 @@ section {
     .multi-column:last-child {
         padding-left: 20px;
     }
-    .section-dark {
+    .section-light {
         padding: 50px 10%;
     }
     /*--------------------------
@@ -264,5 +313,10 @@ section {
     }
     .scroll-snap-card {
         height: 70%;
+    }
+    .scroll-snap-number {
+        width: 80px;
+        height: 80px;
+        font-size: 4em;
     }
 }

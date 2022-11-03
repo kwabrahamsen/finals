@@ -179,9 +179,9 @@ section {
 }
 .section-dark:first-child {
     position: relative;
-    background: rgb(97,14,226);
-    background: linear-gradient(0deg, rgba(97,14,226,1) 0%, rgba(146,42,245,1) 100%);
-    padding-top: 200px;
+    background: rgb(136,56,251);
+    background: linear-gradient(0deg, rgba(136,56,251,1) 0%, rgba(185,125,250,1) 100%);
+    padding-top: 230px;
 }
 /*-- Multi Column Section ------------*/
 .multi-column-container {
@@ -209,8 +209,8 @@ section {
     min-width: 400px;
     margin: 65px 30px 65px 30px;
     padding: 20px;
-    background: rgb(97,14,226);
-    background: linear-gradient(0deg, rgba(97,14,226,1) 0%, rgba(146,42,245,1) 100%);
+    background: rgb(136,56,251);
+    background: linear-gradient(0deg, rgba(136,56,251,1) 0%, rgba(185,125,250,1) 100%);
     color: white;
     border-radius: 10px;
     position: relative;

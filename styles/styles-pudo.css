@@ -129,6 +129,15 @@ a:visited {
 /*-- Main Content ------------
 ----------------------------*/
 /*-- Heading Image ------------*/
+.photographer {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.5);
+    color: darkgray;
+    padding: 5px 8px;
+    border-radius: 0 5px 0 0;
+}
 .heading-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/traffic.jpg");
 }

@@ -371,9 +371,10 @@ label {
 .testimonial {
     background-color: #132736;
     border-radius: 10px;
+    font-size: 0.8em;
     padding: 15px;
     margin: 10px;
-    min-width: 300px;
+    min-width: 200px;
     scroll-snap-align: center;
 }
 .testimonial p {
@@ -478,6 +479,10 @@ footer h3 {
     /*-- Testimonials Section ------------*/
     .section-testimonial {
         padding: 10px 10%;
+    }
+    .testimonial {
+        min-width: 400px;
+        font-size: 1em;
     }
     /*-- Footer Section ------------*/
     footer {

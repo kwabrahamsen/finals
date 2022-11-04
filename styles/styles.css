@@ -246,7 +246,8 @@ section {
 
 /*-- Dark Section ------------*/
 .section-dark {
-    background-color: #0C1821;
+    background: rgb(12,24,33);
+    background: linear-gradient(0deg, rgba(12,24,33,1) 0%, rgba(19,39,54,1) 100%);
     color: white;
 }
 .section-dark h2 {
@@ -255,7 +256,7 @@ section {
 
 /*-- Testimonial Section ------------*/
 .section-testimonial {
-
+    background: rgb(12,24,33);
 }
 
 /*-- Buttons ------------*/
@@ -306,6 +307,10 @@ input[type=text], input[type=tel], select, textarea {
 }
 label {
     font-size: 1.1em;
+}
+input:focus, select:focus, textarea:focus {
+    box-shadow: 0px 0px 0px 6px rgba(43, 88, 122, 0.5);
+    transition: 0.3s;
 }
 
 /*-- Restaurant Menu Styles ------------*/
@@ -376,6 +381,10 @@ label {
     margin: 10px;
     min-width: 200px;
     scroll-snap-align: center;
+}
+.testimonial:hover {
+    box-shadow: 0px 0px 0px 6px rgba(43, 88, 122, 0.5);
+    transition: 0.3s;
 }
 .testimonial p {
     margin-bottom: 0;

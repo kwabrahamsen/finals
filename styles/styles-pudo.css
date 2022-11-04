@@ -180,7 +180,7 @@ a:visited {
     background-color: white;
     border-radius: 10px;
     color: #0C1821;
-    box-shadow: 0 3px 8px 0 rgba(55, 8, 131, 0.915);
+    box-shadow: 0 0px 6px 6px rgba(0, 0, 0, 0.6);
 }
 /*-- Light Section ------------*/
 .section-light {
@@ -281,34 +281,6 @@ footer {
 footer h3 {
     color: white;
 }
-/*-- To Top ------------*/
-#to-top {
-    background-color: white;
-    color: #0C1821;
-    padding: 10px 15px;
-    border-radius: 15px 0px 0px 15px;
-    position: absolute;
-    top: 10px;
-    right: 0px;
-    transition: 0.3s;
-}
-#to-top:hover {
-    background-color: #ffc300;
-}
-#to-top a {
-    color: #0C1821;
-}
-#to-top a:hover {
-    color: #0C1821;
-}
-#to-top a:visited {
-    color: #0C1821;
-}
-.to-top-icon {
-    color: #f1f1f1;
-    height: 20px;
-    width: 20px;
-}
 /* @media */
 @media (min-width: 800px) {
     h1 {
@@ -355,8 +327,13 @@ footer h3 {
         justify-content: space-evenly;
     }
     footer {
-        flex-flow: row;
+        flex-flow: row wrap;
         justify-content: space-around;
         text-align: left;
+    }
+    .to-top {
+        min-width: 100%;
+        text-align: center;
+        margin-top: 20px;
     }
 }

@@ -20,7 +20,7 @@ h2 {
 h3 {
     font-size: 2em;
 }
-p {
+p, a {
     font-family: source-sans-pro, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -151,12 +151,15 @@ a:visited {
     height: 500px;
 }
 .hero-text {
+    text-transform: uppercase;
     text-align: center;
+    padding: 0 10px;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    background-color: #f1f1f1;
+    mix-blend-mode: screen;
 }
 .hero-text p {
     margin-bottom: 5px;
@@ -185,13 +188,12 @@ a:visited {
 }
 /*-- Dark Section ------------*/
 .section-dark {
-    background-color: #0C1821;
+    background: rgb(12,24,33);
+    background: linear-gradient(0deg, rgba(12,24,33,1) 0%, rgba(19,39,54,1) 100%);
     color: white;
 }
 .section-dark:first-child {
     position: relative;
-    background: rgb(136,56,251);
-    background: linear-gradient(0deg, rgba(136,56,251,1) 0%, rgba(185,125,250,1) 100%);
     padding-top: 230px;
 }
 /*-- Multi Column Section ------------*/
@@ -225,8 +227,8 @@ a:visited {
     min-width: 320px;
     margin: 20px;
     padding: 20px;
-    background: rgba(48, 80, 105, 0.945);
-    color: white;
+    background: rgba(255, 255, 255, 0.945);
+    color: #0C1821;
     border-radius: 10px;
     position: relative;
 }
@@ -255,10 +257,12 @@ a:visited {
 .number {
     width: 50px;
     height: 50px;
+    padding-top: 4px;
     background: rgb(136,56,251);
+    border: 3px solid white;
     color: white;
     border-radius: 50%;
-    font-size: 2.5em;
+    font-size: 2em;
     font-weight: bolder;
     text-align: center;
 }
@@ -316,10 +320,10 @@ footer h3 {
     p {
         font-size: 1.1em;
     }
-    footer {
-        flex-flow: row;
-        justify-content: space-around;
-        text-align: left;
+    #logo {
+        height: 50px;
+        width: 50px;
+        margin-left: 0;
     }
     .background-fixed {
         background-attachment: fixed;
@@ -349,5 +353,10 @@ footer h3 {
     .flex-container {
         flex-flow: row wrap;
         justify-content: space-evenly;
+    }
+    footer {
+        flex-flow: row;
+        justify-content: space-around;
+        text-align: left;
     }
 }

@@ -131,6 +131,15 @@ h2 {
     font-size: 2em;
     margin-top: 0;
 }
+.photographer {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.5);
+    color: darkgray;
+    padding: 5px 8px;
+    border-radius: 0 5px 0 0;
+}
 .heading-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/siyuan-g_V2rt6iG7A-unsplash.jpg");
 }
@@ -161,6 +170,7 @@ h2 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
 }
 .side-text {
     width: 100%;
@@ -292,6 +302,7 @@ footer h3 {
 }
 #to-top {
     background-color: white;
+    color: #0C1821;
     padding: 10px 15px;
     border-radius: 15px 0px 0px 15px;
     position: absolute;

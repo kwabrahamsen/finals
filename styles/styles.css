@@ -359,7 +359,7 @@ label {
 
 /*-- Testimonials Section ------------*/
 .section-testimonial {
-    padding: 0 10%;
+    padding: 10px 20px;
 }
 .testimonial-container {
     display: flex;

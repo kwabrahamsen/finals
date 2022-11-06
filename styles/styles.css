@@ -4,6 +4,7 @@ html {
   }
 body {
     margin: 0;
+    background-color: #0C1821;
 }
 h1, h2, h3, h4 {
     font-family: oswald, sans-serif;
@@ -403,6 +404,9 @@ section {
     padding: 10px 20px;
     background: rgb(12,24,33);
 }
+.section-testimonial h3 {
+    text-align: center;
+}
 .testimonial-container {
     display: flex;
     flex-flow: row nowrap;
@@ -437,8 +441,9 @@ section {
     display: flex;
     flex-flow: column;
     justify-content: center;
+    width: 300px;
     margin: auto;
-    padding: 0 20%;
+    padding: 0 10%;
     background: #0C1821;
 }
 .section-author h3 {

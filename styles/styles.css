@@ -29,9 +29,17 @@ p, a, label {
     font-style: normal;
     line-height: 1.8em;
 }
-p {
+i {
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+p, i {
     line-height: 1.5em;
     font-size: 1.2em;
+}
+.icon-margin-right {
+    padding-right: 10px;
 }
 /*-- Links ------------*/
 a {
@@ -50,7 +58,7 @@ a:visited {
 button, input[type=submit] {
     padding: 15px 25px;
     margin: 10px auto;
-    border-width: 2px;
+    border-width: 3px;
     border-style: solid;
     border-radius: 30px;
     font-size: 1.2em;
@@ -70,14 +78,13 @@ button, input[type=submit]:hover {
     color: white;
 }
 .btn-dark {
-    background-color: white;
     border-color: white;
-    color: #0C1821;
+    color: white;
     transition: 0.3s;
 }
 .btn-dark:hover {
-    background-color: #ffc300;
-    border-color: #ffc300;
+    background-color: white;
+    border-color: white;
     color: #0C1821;
 }
 
@@ -197,6 +204,9 @@ input:focus, select:focus, textarea:focus {
     padding: 5px 8px;
     border-radius: 0 5px 0 0;
 }
+.photographer i {
+    font-size: 0.8em;
+}
 
 /*-- General Sections ------------*/
 section {
@@ -212,7 +222,7 @@ section {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/sebastian-coman-photography-dUqX2Eq-2jk-unsplash.jpg");
 }
 #heading-image-pudo {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/traffic.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/oslo.png");
 }
 #heading-image-reservations {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/andrew-seaman-sQopSb2K0CU-unsplash.jpg");
@@ -290,7 +300,7 @@ section {
 }
 /*-- Featured Section ------------*/
 .section-featured {
-    padding-top: 230px;
+    padding-top: 250px;
 }
 .featured {
     margin-left: 10%;
@@ -306,67 +316,19 @@ section {
 .featured h2 {
     color: #0C1821;
 }
-/*-- Cards Section ------------*/
-#scroll-snap-image {
-    background-image: url("../img/oslo.png");
-}
-.section-scroll-snap {
-    padding-left: 0px;
-    padding-right: 0px;
-
-}
-.card-container {
-    display: flex;
-    flex-flow: row nowrap;
-    width: 100%;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-}
-.card {
-    scroll-snap-align: center;
-    height: 400px;
-    min-width: 320px;
-    margin: 20px;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.945);
-    color: #0C1821;
-    border-radius: 10px;
-    position: relative;
-}
-.card:hover {
-    box-shadow: 0px 0px 0px 6px rgba(72, 120, 157, 0.632);
-    transition: 0.3s;
-}
-.card:hover .number {
-    box-shadow: 0px 0px 0px 6px rgba(72, 120, 157, 0.632);
-    transition: 0.3s;
-}
-.card h3 {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    margin: 0;
-    text-align: right;
-}
-.card p {
-    position: absolute;
-    width: 280px;
-    bottom: 0px;
-    right: 20px;
-    line-height: 1.5em;
-}
-.number {
-    width: 50px;
-    height: 50px;
-    padding-top: 4px;
-    background: rgb(136,56,251);
-    border: 3px solid white;
-    color: white;
-    border-radius: 50%;
-    font-size: 2em;
-    font-weight: bolder;
+/*-- Steps Section ------------*/
+.step-index {
     text-align: center;
 }
+.step-desc h4 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.4em;
+}
+.step-desc p {
+margin-bottom: 0;
+}
+
 /*-- Multi Column Section ------------*/
 .multi-column-container {
     display: flex;
@@ -400,13 +362,6 @@ section {
 }
 
 /*-- Testimonials Section ------------*/
-.section-testimonial {
-    padding: 10px 20px;
-    background: rgb(12,24,33);
-}
-.section-testimonial h3 {
-    text-align: center;
-}
 .testimonial-container {
     display: flex;
     flex-flow: row nowrap;
@@ -430,6 +385,9 @@ section {
 .testimonial p {
     margin-bottom: 0;
 }
+.fa-quote-right {
+    float: right;
+}
 
 /*-- Star Rating ------------*/
 .checked {
@@ -441,7 +399,6 @@ section {
     display: flex;
     flex-flow: column;
     justify-content: center;
-    width: 300px;
     margin: auto;
     padding: 0 10%;
     background: #0C1821;
@@ -451,8 +408,9 @@ section {
 }
 .author {
     border-radius: 10px;
+    width: 300px;
     padding: 20px;
-    margin: auto;
+    margin: 0 auto 20px;
     height: 100px;
     position: relative;
 }
@@ -677,7 +635,7 @@ footer h3 {
     }
     /*-- Testimonials Section ------------*/
     .section-testimonial {
-        padding: 10px 10%;
+        padding: 50px 10%;
     }
     .testimonial {
         min-width: 400px;
@@ -686,6 +644,9 @@ footer h3 {
     /*-- Multi Column Section ------------*/
     .multi-column-container {
         flex-flow: row;
+    }
+    .multi-column h2 {
+        text-align: left;
     }
     .multi-column {
         width: 50%;
@@ -701,23 +662,38 @@ footer h3 {
         padding: 50px 50px;
         top: -130px;
     }
-    /*-- Card Section ------------*/
-    .section-scroll-snap {
-        padding: 50px 0;
+    /*-- Steps Section ------------*/
+    .step {
+        display: flex;
+        flex-flow: row nowrap;
+        margin-bottom: 50px;
     }
-    .card-container {
-        flex-flow: row wrap;
-        justify-content: space-evenly;
+    .step-index {
+        min-width: 100px;
+        text-align: left;
+    }
+    .step-index h3 {
+        font-size: 8em;
+        margin: 0;
+    }
+    .step-desc h4 {
+        font-size: 1.6em;
+        text-align: left;
+    }
+    .step-desc {
+
     }
     /*-- Author Section ------------*/
     .section-author {
-        display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
+        padding: 0 20%;
+    }
+    .author-container {
+        margin-top: 20px;
     }
     .author {
         width: 300px;
-        margin-top: 20px;
     }
     /*-- Footer Section ------------*/
     footer {

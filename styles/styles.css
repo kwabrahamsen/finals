@@ -353,12 +353,17 @@ margin-bottom: 0;
 .contact-info {
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-between;
     width: 100%;
-    justify-content: center;
 }
 .contact-info-element {
-    width: 50%;
     text-align: center;
+}
+.contact-info-element h3 {
+    font-size: 1.3em
+}
+.contact-info-element p {
+    font-size: 1em;
 }
 
 /*-- Testimonials Section ------------*/

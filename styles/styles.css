@@ -447,7 +447,6 @@ section {
     border-radius: 10px;
     padding: 20px;
     margin: auto;
-    width: 300px;
     height: 100px;
     position: relative;
 }
@@ -712,6 +711,7 @@ footer h3 {
         justify-content: space-between;
     }
     .author {
+        width: 300px;
         margin-top: 20px;
     }
     /*-- Footer Section ------------*/

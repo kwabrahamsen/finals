@@ -436,6 +436,7 @@ section {
 .section-author {
     display: flex;
     flex-flow: column;
+    justify-content: center;
     margin: auto;
     padding: 0 20%;
     background: #0C1821;
@@ -458,7 +459,6 @@ section {
     background: #132736;
     color: white;
 }
-
 .author h4, .author p {
     margin-top: 0;
     margin-bottom: 0;

@@ -10,7 +10,6 @@ h1, h2, h3, h4 {
     font-family: oswald, sans-serif;
     font-weight: 500;
     font-style: normal;
-    text-align: center;
 }
 h1 {
     font-size: 3em;
@@ -24,10 +23,7 @@ h2 {
 h3 {
     font-size: 2em;
 }
-h4 {
-    font-size: 1.4em;
-}
-p, a, label, li {
+p, a, label {
     font-family: source-sans-pro, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -42,18 +38,21 @@ p, i {
     line-height: 1.5em;
     font-size: 1.2em;
 }
-li {
-    list-style-type: none;
-}
 .icon-margin-right {
     padding-right: 10px;
 }
 /*-- Links ------------*/
 a {
     color: white;
-    text-decoration: underline;
+    font-size: 1.1em;
+    text-decoration: none;
 }
-a:hover a:visited {
+a:hover {
+    color: white;
+    background-color: #0C1821;
+    transition: 0.3s;
+}
+a:visited {
     color: white;
 }
 /*-- Buttons ------------*/
@@ -125,7 +124,10 @@ input:focus, select:focus, textarea:focus {
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.9);
     overflow-x: hidden;
-    transition: 0.3s;
+    transition: 0.5s;
+}
+.nav-menu-overlay a:hover, .nav-menu-overlay a:focus {
+    color: #f1f1f1;
 }
 .closebtn {
     position: absolute;
@@ -138,32 +140,24 @@ input:focus, select:focus, textarea:focus {
     top: 25%;
     width: 100%;
     text-align: center;
+    font-size: 1.2em;
+    color: white;
     padding-left: 0;
 }
-.nav-menu-overlay a {
-    padding: 0 5px;
-    margin-bottom: 20px;
-    font-size: xx-large;
-    text-decoration: none;
-    color: #818181;
-    transition: 0.3s;
-}
-.nav-menu-overlay li {
-    color: #818181;
-    font-size: xx-large;
-}
-.nav-menu-overlay a:hover, .nav-menu-overlay li:hover, .active {
-    color: white;
-    text-decoration: none;
-}
-.nav-menu-overlay a:visited, .nav-menu-overlay li:visited {
-    color: #818181;
-}
-.nav-menu-overlay a .active {
-    color: white;
-}
-
 /*-- Logo and Burger ------------*/
+.icon {
+    color: white;
+    display: block;
+    font-size: xx-large;
+    float: right;
+}
+.icon:hover {
+    color: #ffc300;
+}
+.icon:visited {
+    color: white;
+}
+/*-- Logo ------------*/
 #logo {
     background-image: url("../img/logo.png");
     height: 40px;
@@ -173,11 +167,30 @@ input:focus, select:focus, textarea:focus {
     background-size: cover;
     float: left;
 }
-.burger-icon, .burger-icon:visited {
-    color: white;
-    display: block;
+
+/*-- Navigation Section ------------*/
+.nav-menu-overlay a, .nav-menu-overlay li {
+    list-style-type: none;
+    padding: 0 5px;
+    margin-bottom: 20px;
+    color: #818181;
+    transition: 0.3s;
+}
+.nav-menu-overlay li {
+    color: #818181;
     font-size: xx-large;
-    float: right;
+}
+.nav-menu-overlay a:hover, .nav-menu-overlay li:hover {
+    color: #f1f1f1;
+}
+.nav-menu-overlay a:visited, .nav-menu-overlay li:visited {
+    color: #818181;
+}
+.nav-menu-overlay a:focus, .nav-menu-overlay li:focus {
+    color: #f1f1f1;
+}
+.nav-menu-overlay a .active {
+    color: #f1f1f1;
 }
 
 /*-- Photography Rights ------------*/
@@ -187,9 +200,17 @@ input:focus, select:focus, textarea:focus {
     left: 0px;
     background: rgba(0, 0, 0, 0.5);
     color: darkgray;
-    font-size: 0.6em;
     padding: 5px 8px;
     border-radius: 0 5px 0 0;
+}
+.photographer i {
+    font-size: 0.8em;
+}
+
+/*-- General Sections ------------*/
+section {
+    padding: 50px 10%;
+    position: relative;
 }
 
 /*-- Header Image Section ------------*/
@@ -227,23 +248,10 @@ input:focus, select:focus, textarea:focus {
     margin-bottom: 5px;
     font-size: 1.2em;
 }
-
-/*-- Sections ------------*/
-section {
-    padding: 50px 10%;
-    position: relative;
-}
-
 /*-- Light Section ------------*/
 .section-light {
     background-color: white;
     color: #0C1821;
-}
-.section-light a {
-    color: #0C1821;
-}
-.section-light a:hover, .section-light a:visited {
-    color: #132736;
 }
 /*-- Dark Section ------------*/
 .section-dark {
@@ -251,7 +259,33 @@ section {
     background: linear-gradient(0deg, rgba(12,24,33,1) 0%, rgba(19,39,54,1) 100%);
     color: white;
 }
+.section-dark h2 {
+    color: white;
+}
+.section-dark a {
+    text-decoration: underline;
+}
+.section-dark a:hover {
+    color: #0C1821;
+    background-color: white;
+}
+.section-dark a:visited {
+    color: white;
+}
 /*-- Side Section ------------*/
+#menu-image {
+    background-image: url("../img/sebastian-coman-photography-dUqX2Eq-2jk-unsplash.jpg");
+}
+.side-image {
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.side-text {
+    width: 100%;
+}
 .section-side-right {
     display: flex;
     flex-flow: column;
@@ -259,20 +293,6 @@ section {
 .section-side-right h2 {
     margin-top: 50px;
 }
-.image-side-left {
-    height: 300px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
-#dish-image {
-    background-image: url("../img/sebastian-coman-photography-dUqX2Eq-2jk-unsplash.jpg");
-}
-.text-side-right {
-    width: 100%;
-}
-
 /*-- Fullwidth Section ------------*/
 .section-fullwidth {
     margin: 0;
@@ -289,12 +309,21 @@ section {
     position: absolute;
     top: -100px;
     left: 0;
+    background-color: white;
     border-radius: 10px;
+    color: #0C1821;
 }
-
-/*-- Numbered Steps Section ------------*/
+.featured h2 {
+    color: #0C1821;
+}
+/*-- Steps Section ------------*/
 .step-index {
     text-align: center;
+}
+.step-desc h4 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.4em;
 }
 .step-desc p {
 margin-bottom: 0;
@@ -379,8 +408,10 @@ margin-bottom: 0;
     padding: 0 10%;
     background: #0C1821;
 }
+.section-author h3 {
+    text-align: center;
+}
 .author {
-    background: #132736;
     border-radius: 10px;
     width: 300px;
     padding: 20px;
@@ -391,6 +422,10 @@ margin-bottom: 0;
 .author:hover {
     box-shadow: 0px 0px 0px 6px rgba(43, 88, 122, 0.5);
     transition: 0.3s;
+}
+.section-dark .author {
+    background: #132736;
+    color: white;
 }
 .author h4, .author p {
     margin-top: 0;
@@ -438,30 +473,26 @@ margin-bottom: 0;
 .author .fa:hover {
     transition: 0.3s;
 }
-.author .fa {
-    border-width: 2px;
-    border-style: solid;
-}
 .fa-linkedin {
-    border-color: #007bb5;
+    border: 2px solid #007bb5;
 }
 .fa-linkedin:hover {
     background: #007bb5;
 }
 .fa-twitter {
-    border-color: #55ACEE;
+    border: 2px solid #55ACEE;
 }
 .fa-twitter:hover {
     background: #55ACEE;
 }
 .fa-facebook {
-    border-color: #3B5998;
+    border: 2px solid #3B5998;
 }
 .fa-facebook:hover {
     background: #3B5998;
 }
 .fa-snapchat-ghost {
-    border-color: #fffc00;
+    border: 2px solid #fffc00;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 .fa-snapchat-ghost:hover {
@@ -482,16 +513,23 @@ margin-bottom: 0;
     float: right;
     font-size: 1.5em;
     font-style: italic;
-    margin-top: 20px;
+    margin-top: 24px;
 }
 .dish-title {
-    text-align: left;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 .dish-details {
     padding-left: 20px;
     font-style: italic;
+}
+.emoji {
+    font-size: 0.6em;
+}
+
+#allergies {
+    color: #0C1821;
+    text-align: center;
 }
 .badge{
     font-size: small;
@@ -557,12 +595,12 @@ footer h3 {
         text-align: left;
         margin-top: 0;
     }
-    #dish-image {
+    .side-image {
         height: 400px;
         width: 50%;
         background-position: 70% 50%;
     }
-    .text-side-right {
+    .side-text {
         width: 50%;
         padding-left: 5%;
     }
@@ -595,7 +633,6 @@ footer h3 {
     }
     .contact-info h3 {
         font-size: 1em;
-        text-align: left;
     }
     .contact-info p {
         font-size: 1em;
@@ -610,7 +647,7 @@ footer h3 {
         font-size: 1em;
     }
     /*-- Multi Column Section ------------*/
-    .multi-column-container .image-side-left {
+    .multi-column-container .side-image {
         width: 50%;
     }
     .multi-column-container {

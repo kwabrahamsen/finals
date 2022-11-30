@@ -20,40 +20,41 @@
     <body>
         <!-- Header -->
         <header id="top">
-            <!-- Navigation Menu -->
-            <div id="heading-image-menu" class="background-fixed hero-image">
+            <nav id="nav-bar">
+                    
+                <!-- Overlay menu section -->
+                <div id="nav-menu-overlay" class="nav-menu-overlay">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <ul class="nav-menu">
+                        <a href="index.html"><li>Hjem</li></a>
+                        <a href="menu.html"><li class="active">Vår meny</li></a>
+                        <a href="reservations.html"><li>Reservasjoner</li></a>
+                        <a href="accessibility.html"><li>Accessibility</li></a>
+                        <a href="topical.html"><li>Topical</li></a>
+                    </ul>
+                </div>
+                
+                <!-- Logo -->
+                <a href="index.html"><div id="logo"></div></a>
+                
+                <!-- Burger icon -->
+                <a href="javascript:void(0);" class="burger-icon" onclick="openNav()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+
+            <!-- Header Image Section -->
+            <div id="heading-image-menu" class="background-fixed hero-image" aria-hidden="true">
                 <div class="photographer"><i>&copy; Sebastian Coman, Unsplash</i></div>
-                <nav id="nav-bar">
-                    
-                    <!-- Overlay menu section -->
-                    <div id="nav-menu-overlay" class="nav-menu-overlay">
-                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                        <ul class="nav-menu">
-                            <a href="index.html"><li>Hjem</li></a>
-                            <a href="menu.html"><li class="active">Vår meny</li></a>
-                            <a href="reservations.html"><li>Reservasjoner</li></a>
-                            <a href="accessibility.html"><li>Accessibility</li></a>
-                            <a href="topical.html"><li>Topical</li></a>
-                        </ul>
-                    </div>
-                    
-                    <!-- Logo -->
-                    <a href="index.html"><div id="logo"></div></a>
-                    
-                    <!-- Burger icon -->
-                    <a href="javascript:void(0);" class="burger-icon" onclick="openNav()">
-                        <i class="fa fa-bars"></i>
-                    </a>
-                </nav>
                 <div class="hero-text">
                     <p>La fristelsene løpe løpsk</p>
                     <h1>Vår meny</h1>
                 </div>
             </div>
-        </header>
-
-        <!-- Main Content -->
-        <main>
 
             <!-- Menu Section -->
             <section class="section-light">
@@ -138,7 +139,7 @@
 
                     <div class="menu-section">
                         <div class="dish">
-                            <h3 class="dish-title">Ost <span class="badge">Gluten</span></h3>
+                            <h3 class="dish-title">Ost <span class="badge">Gluten</span><span class="badge">Nøtter</span></h3>
                             <p class="dish-details">Pekannøtter, tindved, rosiner, honning og brød.</p>
                         </div>
                         <div class="dish-price">

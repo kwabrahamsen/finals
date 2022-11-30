@@ -1,0 +1,137 @@
+<html lang="nb">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <meta name="msapplication-TileColor" content="#132736">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://use.typekit.net/lpa5jqg.css">
+        <title>New Wave | Reservasjoner</title>
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header id="top">
+            <nav id="nav-bar">
+                    
+                <!-- Overlay menu section -->
+                <div id="nav-menu-overlay" class="nav-menu-overlay">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <ul class="nav-menu">
+                        <a href="index.html"><li>Hjem</li></a>
+                        <a href="menu.html"><li>Vår meny</li></a>
+                        <a href="reservations.html"><li>Reservasjoner</li></a>
+                        <a href="accessibility.html"><li class="active">Accessibility</li></a>
+                        <a href="topical.html"><li>Topical</li></a>
+                    </ul>
+                </div>
+
+                <!-- Logo -->
+                <a href="index.html"><div id="logo"></div></a>
+                
+                <!-- Burger icon -->
+                <a href="javascript:void(0);" class="burger-icon" onclick="openNav()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+
+            <!-- Header Image Section -->
+            <div id="heading-image-code" class="background-fixed hero-image">
+                <div class="photographer"><i>&copy; Kjell Wiggo Abrahamsen</i></div>
+                <div class="hero-text">
+                    <p>Vurderinger gjort underveis</p>
+                    <h1>Grunnlag for kodevalg</h1>
+                </div>
+            </div>
+
+            <!-- Automated Test Section -->
+            <section class="section-dark section-side">
+                <div class="image-side-left">
+                    <img id="code-image-1" src="img/code-1.png" alt="Skjermdump fra en autmatisk test for tilrettelegging av nettside">
+                    <div class="photographer"><i>&copy; Kjell Wiggo Abrahamsen</i></div>
+                </div>
+
+                <div class="text-side-right">
+                    <h2 class="heading-transition">Den automatiske testen</h2>
+                    <p class="p-transition">Den automatiske testen gir kun to feil, som beror på at <code class="code-green-light">&lt;a&gt;</code> elementene som inneholder logo og meny-burger ikke har noen tekst, men siden disse inneholder visuelle elementer ignorerer jeg disse feilvarslingene.</p>
+                    <p>Testen oppgir også at siden inneholder språkdefinering <code class="code-green-light">&lt;html <code class="code-blue-light">lang="nb"</code>&gt;</code>, samt <code class="code-blue-light">aria-hidden="true"</code> på ikoner for å hjelpe skjermlesere. Alternativ tekst er også oppgitt på bilder som ikke er overskriftsbilder, men som er del av innholdet, og disse bildene er også hentet med html i stedet for css.</p>
+                    <p>Siden er strukturert etter hovedelementene <code class="code-green-light">&lt;header&gt;</code>, <code class="code-green-light">&lt;main&gt;</code> og <code class="code-green-light">&lt;footer&gt;</code>, deretter inndelt etter med <code class="code-green-light">&lt;nav&gt;</code>, <code class="code-green-light">&lt;section&gt;</code> og hierarkiske headers.</p>
+                </div>
+            </section>
+            
+            <!-- CSS Section -->
+            <section class="section-light section-side">
+                <div class="image-side-right">
+                    <img id="css-logo" src="img/css.png" alt="Blå CSS logo">
+                    <div class="photographer"><i>&copy; Wikipedia</i></div>
+                </div>
+
+                <div class="text-side-left">
+                    <h2>CSS</h2>
+                    <p>Hva gjelder CSS-en så er den bygget opp «mobile first», og deretter skaleres den opp med <code class="code-red-dark">@media</code> query.</p>
+                    <div class="code-block-dark">
+                        <code class="code-blue-light">
+                            <code class="code-red-light">
+                                @media</code> (min-width: 800<code class="code-red-light">px</code>) {<br>
+                                }
+                        </code>
+                    </div>
+                    <p>Det er også bevisst valgt at noen av selectorene er relative slik at om man ville byttet en seksjon fra lys til mørk så endres også fargene på <code class="code-green-dark">&lt;p&gt;</code>, <code class="code-green-dark">&lt;h#&gt;</code> og <code class="code-green-dark">&lt;a&gt;</code> også automatisk. Andre elementer som knapper og kode, som man muligens vil ha mer styring på selv er designet med mulighet for å selv velge når man vil bruke mørk og lys variant, eksempelvis:</p>
+                    <div class="code-block-dark">
+                        <code class="code-blue-light">
+                            <code class="code-comment-light">/*Relativ selector*/</code><br>
+                            .section-light <code class="code-green-light">a</code> {<br>
+                            color: #0C1821;<br>
+                            }<br>
+                            <code class="code-comment-light">/*Manuelt fargevalg*/</code><br>
+                            .code-blue-light {<br>
+                            color: deepskyblue;<br>
+                            }<br>
+                            .code-blue-dark {<br>
+                            color: midnightblue;<br>
+                            }
+                        </code>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-item">
+                <h3>Kontakt oss</h3>
+                <p>Waldemars Hage 4<br>0175 Oslo</p>
+                <p>kw.abrahamsen@icloud.com<br>90 21 20 80</p>
+            </div>
+            <div class="footer-item">
+                <h3>Åpningstider</h3>
+                <p>Søn - Ons: 12.00-00.00<br>Tor - Lør: 12.00-03.00</p>
+            </div>
+            <div class="to-top">
+                <a href="#top">Til toppen</a>
+            </div>
+        </footer>
+        <script>
+            function openNav() {
+                document.getElementById("nav-menu-overlay").style.width = "100%";
+            }
+
+            function closeNav() {
+                document.getElementById("nav-menu-overlay").style.width = "0%";
+            }
+        </script>
+    </body>
+</html>

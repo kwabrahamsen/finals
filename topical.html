@@ -20,37 +20,39 @@
     <body>
         <!-- Header -->
         <header id="top">
-            <!-- Navigation Menu -->
-            <div id="heading-image-pudo" class="background-fixed hero-image">
-                <div class="photographer"><i>&copy; Apple Inc</i></div>
-                <h1 class="hero-text">Selvkjørende biler</h1>
-                <nav id="nav-bar">
-                    
-                    <!-- Overlay menu section -->
-                    <div id="nav-menu-overlay" class="nav-menu-overlay">
-                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                        <ul class="nav-menu">
-                            <a href="index.html"><li>Hjem</li></a>
-                            <a href="menu.html"><li>Vår meny</li></a>
-                            <a href="reservations.html"><li>Reservasjoner</li></a>
-                            <a href="accessibility.html"><li>Accessibility</li></a>
-                            <a href="topical.html"><li class="active">Topical</li></a>
-                        </ul>
-                    </div>
+            <nav id="nav-bar" aria-hidden="true">
+                <!-- Overlay menu section -->
+                <div id="nav-menu-overlay" class="nav-menu-overlay">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <ul class="nav-menu">
+                        <a href="index.html"><li>Hjem</li></a>
+                        <a href="menu.html"><li>Vår meny</li></a>
+                        <a href="reservations.html"><li>Reservasjoner</li></a>
+                        <a href="accessibility.html"><li>Accessibility</li></a>
+                        <a href="topical.html"><li class="active">Topical</li></a>
+                    </ul>
+                </div>
 
-                    <!-- Logo -->
-                    <a href="index.html"><div id="logo"></div></a>
-                    
-                    <!-- Burger icon -->
-                    <a href="javascript:void(0);" class="burger-icon" onclick="openNav()">
-                        <i class="fa fa-bars"></i>
-                    </a>
-                </nav>
-            </div>
+                <!-- Logo -->
+                <a href="index.html"><div id="logo"></div></a>
+                
+                <!-- Burger icon -->
+                <a href="javascript:void(0);" class="burger-icon" onclick="openNav()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </nav>
+            
         </header>
 
         <!-- Main Content -->
         <main>
+
+            <!-- Header Image Section -->
+            <div id="heading-image-pudo" class="background-fixed hero-image">
+                <div class="photographer"><i>&copy; Apple Inc</i></div>
+                <h1 class="hero-text">Selvkjørende biler</h1>
+            </div>
+
             <!-- Tolkning Section -->
             <section class="section-dark section-featured">
                 <div class="featured section-light">
@@ -68,7 +70,7 @@
                 </div>
             </section>
 
-            <!-- Trinnløsning Section -->
+            <!-- Numbered Steps Section -->
             <section class="section-light">
                 <div class="step">
                     <div class="step-index">

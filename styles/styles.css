@@ -231,6 +231,7 @@ section {
 
 /*-- Hero Image Section ------------*/
 .hero-image {
+    position: relative;
     height: 500px;
     background-position: center;
     background-repeat: no-repeat;
@@ -333,6 +334,7 @@ section {
 }
 .two-column {
     min-width: 100%;
+    position: relative;
 }
 #dish-image, #code-image-1, #css-logo {
     height: auto;
@@ -549,6 +551,9 @@ footer {
     color: white;
     text-align: center;
 }
+footer a:not(.to-top a) {
+    text-decoration: none;
+}
 
 /*-- @Media - Screen width greater than 800px ------------*/
 @media (min-width: 800px) {
@@ -577,7 +582,6 @@ footer {
     }
     .two-column {
         min-width: 50%;
-        position: relative;
     }
     .two-column:first-child {
         padding-right: 20px;

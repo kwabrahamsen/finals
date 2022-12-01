@@ -12,21 +12,15 @@ h1, h2, h3, h4 {
     font-style: normal;
     text-align: center;
 }
-h1, h2 {
-    margin-top: 0;
-}
 h1 {
-    font-size: 3em;
+    font-size: 4em;
 }
 h2 {
-    text-align: center;
-    font-size: 2em;
+    font-size: 2.5em;
+    margin-top: 0;
 }
 h3 {
-    font-size: 2em;
-}
-h4 {
-    font-size: 1.4em;
+    font-size: 1.8em;
 }
 p, a, label, li, i {
     font-family: source-sans-pro, sans-serif;
@@ -41,7 +35,7 @@ p, i {
     line-height: 1.5em;
     font-size: 1.2em;
 }
-li {
+ul {
     list-style-type: none;
 }
 
@@ -55,12 +49,17 @@ a:hover a:visited {
 }
 
 /*-- Hover Effect ------------*/
-input:focus, select:focus, textarea:focus, .testimonial:hover, .author:hover {
+input:focus, 
+select:focus, 
+textarea:focus, 
+.testimonial:hover, 
+.author:hover {
     box-shadow: 0px 0px 0px 6px rgba(43, 88, 122, 0.5);
     transition: 0.3s;
 }
-/*-- Transition Effect ------------*/
-h1, h2, h3, h4, p, a, img, form {
+
+/*-- Animation Effect ------------*/
+h1, h2, h3, h4, p, i, a, img, form {
     animation: 0.5s ease-out 0s 1 scaleUp;
 }
 @keyframes scaleUp {
@@ -121,11 +120,8 @@ input[type=text], input[type=tel], select, textarea {
 }
 
 /*-- Navigation Menu ------------*/
-#nav-bar {
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 50px;
-    padding-bottom: 50px;
+nav {
+    padding: 50px 10%;
     position: absolute;
     z-index: 1;
     left: 0;
@@ -138,28 +134,28 @@ input[type=text], input[type=tel], select, textarea {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.9);
     overflow-x: hidden;
     transition: 0.3s;
 }
-.nav-menu-overlay a:not(.closebtn) {
+.nav-menu-overlay a {
     padding: 0 5px;
     margin-bottom: 20px;
     font-size: xx-large;
     text-decoration: none;
-    color: #818181;
     transition: 0.3s;
 }
+.nav-menu-overlay a,
 .nav-menu-overlay li {
     color: #818181;
-    font-size: xx-large;
 }
-.nav-menu-overlay a:hover, .nav-menu-overlay li:hover, .active {
+.nav-menu-overlay a:hover, 
+.nav-menu-overlay li:hover, 
+.active {
     color: white;
-    text-decoration: none;
 }
-.nav-menu-overlay a:visited, .nav-menu-overlay li:visited {
+.nav-menu-overlay a:visited,
+.nav-menu-overlay li:visited {
     color: #818181;
 }
 .nav-menu-overlay a .active {
@@ -169,15 +165,12 @@ input[type=text], input[type=tel], select, textarea {
     position: absolute;
     top: 50px;
     right: 10%;
-    font-size: 60px;
-    text-decoration: none;
 }
 .nav-menu {
     position: absolute;
     top: 25%;
     width: 100%;
     text-align: center;
-    padding-left: 0;
 }
 
 /*-- Logo and Burger ------------*/
@@ -229,12 +222,19 @@ input[type=text], input[type=tel], select, textarea {
 #heading-image-code {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/code.png");
 }
+
+/*-- Sections ------------*/
+section {
+    padding: 50px 10%;
+    position: relative;
+}
+
+/*-- Hero Image Section ------------*/
 .hero-image {
     height: 500px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
 }
 .hero-text {
     text-align: center;
@@ -243,15 +243,6 @@ input[type=text], input[type=tel], select, textarea {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-}
-.hero-text p {
-    margin-bottom: 5px;
-}
-
-/*-- Sections ------------*/
-section {
-    padding: 50px 10%;
-    position: relative;
 }
 
 /*-- Light Section ------------*/
@@ -270,19 +261,6 @@ section {
     background: rgb(12,24,33);
     background: linear-gradient(0deg, rgba(12,24,33,1) 0%, rgba(19,39,54,1) 100%);
     color: white;
-}
-/*-- Side Section ------------*/
-.section-side {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-}
-.section-side h2 {
-    margin-top: 50px;
-}
-#dish-image, #code-image-1, #css-logo {
-    height: auto;
-    max-width: 100%;
 }
 
 /*-- Code Sub Section ------------*/
@@ -331,8 +309,7 @@ section {
     padding-top: 250px;
 }
 .featured {
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: 0 10%;
     padding: 20px 30px;
     position: absolute;
     top: -100px;
@@ -341,24 +318,28 @@ section {
 }
 
 /*-- PUDO Case Steps Section ------------*/
-.step-index {
-    text-align: center;
+.step h4 {
+    font-size: 1.5em;
 }
 .step-desc p {
-margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 /*-- Multi Column Section ------------*/
-.multi-column-container {
+.multi-column-section {
     display: flex;
     flex-flow: column;
+    align-items: flex-start;
 }
-.multi-column {
-    width: 100%;
-    padding-bottom: 10px;
+.two-column {
+    min-width: 100%;
+}
+#dish-image, #code-image-1, #css-logo {
+    height: auto;
+    max-width: 100%;
 }
 
-/*-- Contact Sub Section ------------*/
+/*-- Contact Sub-Section ------------*/
 .section-contact {
     display: flex;
     flex-direction: column;
@@ -366,18 +347,21 @@ margin-bottom: 0;
 .contact-about {
     width: 100%;
 }
-.contact-about a {
-    padding-bottom: 15px;
-    float: left;
-}
 .contact-info {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
     justify-content: space-between;
     width: 100%;
 }
 .contact-info-element {
+    min-width: 200px;
     text-align: center;
+    scroll-snap-align: center;
+    border: 2px solid #0C1821;
+    border-radius: 10px;
+    margin: 20px 10px 0;
 }
 .contact-info-element h3 {
     font-size: 1.3em
@@ -406,9 +390,6 @@ margin-bottom: 0;
     min-width: 200px;
     scroll-snap-align: center;
 }
-.testimonial p {
-    margin-bottom: 0;
-}
 .fa-quote-right {
     float: right;
 }
@@ -434,6 +415,7 @@ margin-bottom: 0;
 }
 .section-author h3 {
     margin: 10px 0;
+    font-size: 1.1em;
 }
 .author {
     background: #132736;
@@ -517,11 +499,12 @@ margin-bottom: 0;
 }
 
 /*-- Restaurant Menu Styles ------------*/
-.menu-section {
+.dish-section {
     display: flex;
     flex-flow: row;
     justify-content: space-between;
-    margin: auto;
+    align-items: flex-start;
+    margin-bottom: 30px;
 }
 .dish {
     width: 70%;
@@ -530,15 +513,12 @@ margin-bottom: 0;
     float: right;
     font-size: 1.5em;
     font-style: italic;
-    margin-top: 20px;
 }
 .dish-title {
     text-align: left;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 0 0 10px;
 }
 .dish-details {
-    padding-left: 20px;
     font-style: italic;
 }
 .badge{
@@ -549,7 +529,7 @@ margin-bottom: 0;
     text-align: center;
     margin-left: 5px;
     position: relative;
-    top: -20px;
+    top: -10px;
 }
 .section-light .badge {
     background-color: #0C1821;
@@ -569,16 +549,10 @@ footer {
     color: white;
     text-align: center;
 }
-footer h3 {
-    color: white;
-}
 
 /*-- @Media - Screen width greater than 800px ------------*/
 @media (min-width: 800px) {
     /*-- Text and Links ------------*/
-    h1 {
-        font-size: 4em;
-    }
     h2 {
         font-size: 3em;
     }
@@ -590,43 +564,44 @@ footer h3 {
     .background-fixed {
         background-attachment: fixed;
     }
-    .hero-image {
-        height: 500px;
-    }
     #logo {
         height: 50px;
         width: 50px;
         margin-left: 0;
     }
-    /*-- Side Section ------------*/
-    .section-side {
-        flex-flow: row;
-        padding: 70px 10%;
+    /*-- Multi Column Section ------------*/
+    .multi-column-section {
+        padding: 50px 10%;
+        flex-flow: row nowrap;
+        justify-content: space-between;
     }
-    .section-side h2 {
-        text-align: left;
-        margin-top: 0;
-    }
-    .image-side-left, .image-side-right {
+    .two-column {
+        min-width: 50%;
         position: relative;
-        max-width: 50%;
-        margin: 0 50px;
     }
-    .image-side-right {
-        order: 1;
+    .two-column:first-child {
+        padding-right: 20px;
     }
-    .text-side-right, .text-side-left {
-        max-width: 50%;
+    .two-column:last-child {
+        padding-left: 20px;
     }
-    .text-side-right {
-        padding-left: 5%;
+    .two-column h2 {
+        text-align: left;
     }
-    .text-side-left {
-        padding-right: 5%;
+    .two-column-reverse {
+        flex-flow: row-reverse nowrap;
     }
-    /*-- Contact Sub Section ------------*/
+    .two-column-reverse .two-column:first-child {
+        padding-left: 20px;
+        padding-right: 0;
+    }
+    .two-column-reverse .two-column:last-child {
+        padding-left: 0;
+        padding-right: 20px;
+    }
+
+    /*-- Contact Sub-Section ------------*/
     .section-contact {
-        display: flex;
         flex-direction: row;
         padding: 70px 10%;
     }
@@ -634,9 +609,7 @@ footer h3 {
         width: 70%;
         padding-right: 10%;
     }
-    .contact-about h2 {
-        text-align: right;
-    }
+    .contact-about h2,
     .contact-about p {
         text-align: right;
     }
@@ -646,17 +619,22 @@ footer h3 {
     .contact-info {
         flex-direction: column;
         width: 20%;
+        overflow-x: visible;
     }
     .contact-info-element {
         width: 100%;
         text-align: left;
+        border: none;
+        margin: 0;
+    }
+    .contact-info h3,
+    .contact-info p {
+        font-size: 1em;
     }
     .contact-info h3 {
-        font-size: 1em;
         text-align: left;
     }
     .contact-info p {
-        font-size: 1em;
         padding-bottom: 20px;
     }
     /*-- Testimonials Section ------------*/
@@ -666,25 +644,6 @@ footer h3 {
     .testimonial {
         min-width: 400px;
         font-size: 1em;
-    }
-    /*-- Multi Column Section ------------*/
-    .multi-column-container .image-side-left {
-        width: 50%;
-    }
-    .multi-column-container {
-        flex-flow: row;
-    }
-    .multi-column h2 {
-        text-align: left;
-    }
-    .multi-column {
-        width: 50%;
-    }
-    .multi-column:first-child {
-        padding-right: 20px;
-    }
-    .multi-column:last-child {
-        padding-left: 20px;
     }
     /*-- PUDO Case Featured Section ------------*/
     .featured {

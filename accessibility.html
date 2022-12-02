@@ -52,7 +52,6 @@
 
             <!-- Header Image Section -->
             <div id="heading-image-code" class="background-fixed hero-image">
-                <div class="photographer"><i>&copy; Kjell Wiggo Abrahamsen</i></div>
                 <div class="hero-text">
                     <p>Vurderinger gjort underveis</p>
                     <h1>Grunnlag for kodevalg</h1>
@@ -61,16 +60,49 @@
 
             <!-- Automated Test Section -->
             <section class="section-dark multi-column-section">
-                <div class="two-column">
-                    <img id="code-image-1" src="img/code-1.png" alt="Skjermdump fra en autmatisk test for tilrettelegging av nettside">
-                    <div class="photographer"><i>&copy; Kjell Wiggo Abrahamsen</i></div>
+                <!-- Full width -->
+                <div class="two-column-full-width">
+                    <h2>Automatisk test</h2>
                 </div>
 
+                <!-- Two Column -->
                 <div class="two-column">
-                    <h2 class="heading-transition">Den automatiske testen</h2>
-                    <p class="p-transition">Den automatiske testen gir kun to feil, som beror på at <code class="code-green-light">&lt;a&gt;</code> elementene som inneholder logo og meny-burger ikke har noen tekst, men siden disse inneholder visuelle elementer ignorerer jeg disse feilvarslingene.</p>
-                    <p>Testen oppgir også at siden inneholder språkdefinering <code class="code-green-light">&lt;html <code class="code-blue-light">lang="nb"</code>&gt;</code>, samt <code class="code-blue-light">aria-hidden="true"</code> på ikoner for å hjelpe skjermlesere. Alternativ tekst er også oppgitt på bilder som ikke er overskriftsbilder, men som er del av innholdet, og disse bildene er også hentet med html i stedet for css.</p>
-                    <p>Siden er strukturert etter hovedelementene <code class="code-green-light">&lt;header&gt;</code>, <code class="code-green-light">&lt;main&gt;</code> og <code class="code-green-light">&lt;footer&gt;</code>, deretter inndelt etter med <code class="code-green-light">&lt;nav&gt;</code>, <code class="code-green-light">&lt;section&gt;</code> og hierarkiske headers.</p>
+    
+                    <h3>Feil og features</h3>
+                    <p>Den automatiske testen gir kun to feil, som beror på at anker-elementene som inneholder logo og meny-burger ikke har noen tekst, men siden disse inneholder visuelle elementer ignorerer jeg disse feilvarslingene.</p>
+                    <img id="code-image-1" src="img/code-1.png" alt="Skjermdump fra en autmatisk test for tilrettelegging av nettside">
+                    <p>Testen oppgir også at siden inneholder språkdefinering og den lar skjermlesere ignorere ikoner som følger:</p>
+                    <div class="code-block-dark">
+                        <code class="code-blue-light">
+                            <code class="code-comment-light">&lt;!-- Definerer språket siden er skrevet i --&gt;</code><br>
+                            <code class="code-green-light">&lt;html</code> lang="nb"<code class="code-green-light">&gt;</code><br>
+                            <code class="code-comment-light">&lt;!-- Gjør at skjermlesere ignorerer ikoner --&gt;</code><br>
+                            <code class="code-green-light">&lt;span</code> aria-hidden="true"<code class="code-green-light">&gt;</code>
+                        </code>
+                    </div>
+                </div>
+
+                <!-- Two Column -->
+                <div class="two-column">
+                    <h3>Kontrastnivå</h3>
+                    <p>Ifølge w3schools som refererer til Apple, anbefales det en kontrastrate på minimum 4.5, helst 7. Dette nettstedet scorer 8.59.</p>
+                    <img id="code-image-2" src="img/code-2.png" alt="Skjermdump fra automatisk test av kontrastnivå">
+                   
+                    <h3>Bilder</h3>
+                    <p>Alternativ tekst er også oppgitt på bilder som ikke er overskriftsbilder, men som er del av innholdet, og disse bildene er også hentet med html i stedet for css slik at de blir lastet selv om webklienten ikke laster styles.</p>
+                    
+                    <h3>Struktur</h3>
+                    <p>Siden er strukturert etter hovedelementene header, main og footer, deretter inndelt etter med nav, section og hierarkiske headers.</p>
+                    <div class="code-block-dark">
+                        <code class="code-green-light">
+                            <code>&lt;html&gt;</code><br>
+                            <code style="padding-left:20px;">&lt;header&gt;</code><br>
+                            <code style="padding-left:40px;">&lt;nav&gt;</code><br>
+                            <code style="padding-left:20px;">&lt;main&gt;</code><br>
+                            <code style="padding-left:40px;">&lt;section&gt;</code><br>
+                            <code style="padding-left:20px;">&lt;footer&gt;</code><br>
+                        </code>
+                    </div>
                 </div>
             </section>
             
@@ -83,7 +115,7 @@
 
                 <div class="two-column">
                     <h2>CSS</h2>
-                    <p>Hva gjelder CSS-en så er den bygget opp «mobile first», og deretter skaleres den opp med <code class="code-red-dark">@media</code> query.</p>
+                    <p>Hva gjelder CSS-en så er den bygget opp «mobile first», og deretter skaleres den opp med <code class="code-red-dark">@media</code> query. Koden bryter kun på ett punkt siden det aldri er mer enn to kolonner. </p>
                     <div class="code-block-dark">
                         <code class="code-blue-light">
                             <code class="code-red-light">
@@ -91,7 +123,7 @@
                                 }
                         </code>
                     </div>
-                    <p>Det er også bevisst valgt at noen av selectorene er relative slik at om man ville byttet en seksjon fra lys til mørk så endres også fargene på <code class="code-green-dark">&lt;p&gt;</code>, <code class="code-green-dark">&lt;h#&gt;</code> og <code class="code-green-dark">&lt;a&gt;</code> også automatisk. Andre elementer som knapper og kode, som man muligens vil ha mer styring på selv er designet med mulighet for å selv velge når man vil bruke mørk og lys variant, eksempelvis:</p>
+                    <p>Det er også bevisst valgt at noen av selectorene er relative og nested slik at om man ville byttet en seksjon fra lys til mørk så endres også fargene på <code class="code-green-dark">&lt;p&gt;</code>, <code class="code-green-dark">&lt;h#&gt;</code> og <code class="code-green-dark">&lt;a&gt;</code> også automatisk. Andre elementer som knapper og kode-blokker, som man muligens vil ha mer styring på selv er designet med mulighet for å selv velge når man vil bruke mørk og lys variant, eksempelvis:</p>
                     <div class="code-block-dark">
                         <code class="code-blue-light">
                             <code class="code-comment-light">/*Relativ selector*/</code><br>

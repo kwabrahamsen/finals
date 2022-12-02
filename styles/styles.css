@@ -338,9 +338,6 @@ section {
     min-width: 100%;
     position: relative;
 }
-.two-colums-img {
-    padding: 30px;
-}
 #dish-image, #code-image-1, #css-logo {
     height: auto;
     max-width: 100%;
@@ -581,11 +578,12 @@ footer a:not(.to-top a) {
     }
     /*-- Multi Column Section ------------*/
     .multi-column-section {
-        padding: 50px 10%;
+        padding: 100px 10% 100px;
         flex-flow: row nowrap;
         justify-content: space-between;
     }
     .two-column {
+        box-sizing: border-box;
         min-width: 50%;
     }
     .two-column:first-child {

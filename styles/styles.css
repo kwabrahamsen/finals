@@ -133,6 +133,9 @@ nav {
     left: 0;
     right: 0;
 }
+.nav-bar-background {
+    height: 140px;
+}
 .nav-menu-overlay {
     height: 100%;
     width: 0;
@@ -597,6 +600,9 @@ footer a:not(.to-top a) {
     /*-- Header Image Section ------------*/
     .background-fixed {
         background-attachment: fixed;
+    }
+    .nav-bar-background {
+        height: 150px;
     }
     #logo {
         height: 50px;

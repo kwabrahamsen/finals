@@ -144,7 +144,7 @@ nav {
 .nav-menu-overlay a {
     padding: 0 5px;
     margin-bottom: 20px;
-    font-size: xx-large;
+    font-size: 2em;
     text-decoration: none;
     transition: 0.3s;
 }
@@ -346,6 +346,15 @@ section {
 .two-column {
     position: relative;
     flex: 1 auto;
+}
+.section-whitespace-min:not(:last-child) {
+    padding-bottom: 50px;
+}
+.section-whitespace-min:nth-child(n+3) {
+    padding-top: 0;
+}
+.section-whitespace-min h2 {
+    margin-bottom: 0;
 }
 #dish-image, #code-image-1, #code-image-2 {
     height: auto;

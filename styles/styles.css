@@ -13,6 +13,7 @@ h1, h2, h3, h4 {
     text-align: center;
 }
 h1 {
+    margin-top: 0;
     font-size: 4em;
 }
 h2 {
@@ -148,11 +149,13 @@ nav {
     transition: 0.3s;
 }
 .nav-menu-overlay a {
-    padding: 0 5px;
     margin-bottom: 20px;
-    font-size: 2em;
     text-decoration: none;
     transition: 0.3s;
+}
+.nav-menu-overlay a:not(.closebtn) {
+    padding: 0 5px;
+    font-size: 2em;
 }
 .nav-menu-overlay a,
 .nav-menu-overlay li {
@@ -175,6 +178,7 @@ nav {
     position: absolute;
     top: 50px;
     right: 10%;
+    font-size: 4em;
 }
 .nav-menu {
     position: absolute;
@@ -209,9 +213,12 @@ nav {
     left: 0px;
     background: rgba(0, 0, 0, 0.5);
     padding: 5px 8px;
-    border-radius: 0 5px 0 0;
+    border-radius: 0 10px 0 0;
     font-size: 0.6em;
     color: darkgray;
+}
+.multi-column-section .photographer {
+    border-radius: 0 10px 0 10px;
 }
 
 /*-- Header Images ------------*/
@@ -319,27 +326,6 @@ section {
     margin: 0;
 }
 
-/*-- PUDO Case Featured Section ------------*/
-.section-featured {
-    padding-top: 250px;
-}
-.featured {
-    position: absolute;
-    top: -100px;
-    left: 0;
-    padding: 20px 30px;
-    border-radius: 10px;
-    margin: 0 10%;
-}
-
-/*-- PUDO Case Steps Section ------------*/
-.step h4 {
-    font-size: 1.5em;
-}
-.step-desc p {
-    margin-bottom: 0;
-}
-
 /*-- Multi Column Section ------------*/
 .multi-column-section {
     display: flex;
@@ -352,6 +338,7 @@ section {
 .two-column {
     position: relative;
     flex: 1 auto;
+    box-sizing: border-box;
 }
 .section-whitespace-min:not(:last-child) {
     padding-bottom: 50px;
@@ -366,11 +353,11 @@ section {
     height: auto;
     max-width: 100%;
     border-radius: 10px;
-    margin: 10px 0;
 }
 #code-image-1, #code-image-2 {
     box-sizing: border-box;
     border: 2px solid #0C1821;
+    margin: 10px 0;
 }
 
 /*-- Contact Sub-Section ------------*/
@@ -431,6 +418,27 @@ section {
 /*-- Star Rating ------------*/
 .checked {
     color: #ffc300;
+}
+
+/*-- PUDO Case Featured Section ------------*/
+.section-featured {
+    padding-top: 250px;
+}
+.featured {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    padding: 20px 30px;
+    border-radius: 10px;
+    margin: 0 10%;
+}
+
+/*-- PUDO Case Steps Section ------------*/
+.step h4 {
+    font-size: 1.5em;
+}
+.step-desc p {
+    margin-bottom: 0;
 }
 
 /*-- Author Section ------------*/
@@ -593,22 +601,29 @@ footer a:not(.to-top a) {
     h2 {
         font-size: 3em;
     }
-    /*-- General Sections ------------*/
-    section {
-        padding: 50px 20%;
-    }
-    /*-- Header Image Section ------------*/
-    .background-fixed {
-        background-attachment: fixed;
-    }
+
+    /*-- Navigation Menu ------------*/
     .nav-bar-background {
         height: 150px;
     }
+
+    /*-- Logo and Burger ------------*/
     #logo {
         height: 50px;
         width: 50px;
         margin-left: 0;
     }
+
+    /*-- General Sections ------------*/
+    section {
+        padding: 50px 20%;
+    }
+
+    /*-- Header Image Section ------------*/
+    .background-fixed {
+        background-attachment: fixed;
+    }
+
     /*-- Multi Column Section ------------*/
     .multi-column-section {
         flex-flow: row wrap;
@@ -630,17 +645,6 @@ footer a:not(.to-top a) {
     }
     .two-column h3 {
         text-align: left;
-    }
-    .two-column-reverse {
-        flex-flow: row-reverse nowrap;
-    }
-    .two-column-reverse .two-column:first-child {
-        padding-left: 50px;
-        padding-right: 0;
-    }
-    .two-column-reverse .two-column:last-child {
-        padding-left: 0;
-        padding-right: 50px;
     }
 
     /*-- Contact Sub-Section ------------*/
@@ -680,6 +684,7 @@ footer a:not(.to-top a) {
     .contact-info p {
         padding-bottom: 20px;
     }
+
     /*-- Testimonials Section ------------*/
     .section-testimonial {
         padding: 50px 10%;
@@ -688,11 +693,13 @@ footer a:not(.to-top a) {
         min-width: 400px;
         font-size: 1em;
     }
+
     /*-- PUDO Case Featured Section ------------*/
     .featured {
         top: -130px;
         padding: 50px 50px;
-    }
+    }    
+
     /*-- PUDO Case Steps Section ------------*/
     .step {
         display: flex;
@@ -711,6 +718,7 @@ footer a:not(.to-top a) {
         font-size: 1.6em;
         text-align: left;
     }
+
     /*-- Author Section ------------*/
     .section-author {
         flex-flow: row nowrap;
@@ -723,6 +731,7 @@ footer a:not(.to-top a) {
     .author {
         width: 300px;
     }
+
     /*-- Footer Section ------------*/
     footer {
         flex-flow: row wrap;

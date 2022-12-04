@@ -57,13 +57,7 @@
                 <!-- Full width -->
                 <div class="two-column-full-width">
                     <h2>Automatisk test</h2>
-                </div>
-
-                <!-- Two Column -->
-                <div class="two-column">
-                    <h3>Feil og features</h3>
                     <p>Den automatiske testen gir kun to feil, som beror på at anker-elementene som inneholder logo og meny-burger ikke har noen tekst, men siden disse inneholder visuelle elementer ignorerer jeg disse feilvarslingene.</p>
-                    <img id="code-image-1" src="img/code-1.png" alt="Skjermdump fra en autmatisk test for tilrettelegging av nettside">
                     <p>Testen oppgir også at siden inneholder språkdefinering og den lar skjermlesere ignorere ikoner som følger:</p>
                     <div class="code-block-dark">
                         <code class="code-blue-light">
@@ -77,15 +71,21 @@
 
                 <!-- Two Column -->
                 <div class="two-column">
+                    <h3>Testrapport</h3>
+                    <img id="code-image-1" src="img/code-1.png" alt="Skjermdump fra en autmatisk test for tilrettelegging av nettside">
+                    
+                    <!-- Bilder -->
+                    <h3>Bilder</h3>
+                    <p>Alternativ tekst er også oppgitt på bilder som ikke er overskriftsbilder, men som er del av innholdet, og disse bildene er også hentet med html i stedet for css slik at de blir lastet selv om webklienten ikke laster styles.</p>
+                </div>
+
+                <!-- Two Column -->
+                <div class="two-column">
                     <!-- Kontrastnivå -->
                     <h3>Kontrastnivå</h3>
                     <p>Ifølge w3schools som refererer til Apple, anbefales det en kontrastrate på minimum 4.5, helst 7. Dette nettstedet scorer 8.59.</p>
                     <img id="code-image-2" src="img/code-2.png" alt="Skjermdump fra automatisk test av kontrastnivå">
                    
-                    <!-- Bilder -->
-                    <h3>Bilder</h3>
-                    <p>Alternativ tekst er også oppgitt på bilder som ikke er overskriftsbilder, men som er del av innholdet, og disse bildene er også hentet med html i stedet for css slik at de blir lastet selv om webklienten ikke laster styles.</p>
-                    
                     <!-- Struktur -->
                     <h3>Struktur</h3>
                     <p>Siden er strukturert etter hovedelementene header, main og footer, deretter inndelt etter med nav, section og hierarkiske headers.</p>
@@ -145,19 +145,24 @@
                     <div class="code-block-dark">
                         <code class="code-blue-light">
                             <code class="code-comment-light">/*Display*/</code><br>
-                            display: relative;<br>
+                            display: flex;<br>
+                            flex-flow: row nowrap;<br>
                             <code class="code-comment-light">/*Posisjonering*/</code><br>
                             bottom: 0<code class="code-red-light">px</code><br>
                             left: 0<code class="code-red-light">px</code><br>
                             <code class="code-comment-light">/*Box-model*/</code><br>
-                            height: 400px;<br>
-                            width: 400px;<br>
+                            height: 400<code class="code-red-light">px</code>;<br>
+                            width: 400<code class="code-red-light">px</code>;<br>
                             background-color: #FFF;<br>
+                            padding-left: 10<code class="code-red-light">%</code>;<br>
+                            border: 2<code class="code-red-light">px</code> solid #000;<br>
+                            margin: 30<code class="code-red-light">px</code><br>
                             <code class="code-comment-light">/*Typografi*/</code><br>
+                            color: #000;<br>
                             font-family: oswald, sans-serif;<br>
                             font-weight: 500;<br>
                             <code class="code-comment-light">/*Manipulasjon*/</code><br>
-                            transition: 0.3s;<br>
+                            transition: 0.3<code class="code-red-light">s</code>;<br>
                             <code class="code-comment-light">/*Annet*/</code><br>
                             box-shadow: 0<code class="code-red-light">px</code> 0<code class="code-red-light">px</code> 0<code class="code-red-light">px</code> 6<code class="code-red-light">px</code> rgba(43, 88, 122, 0.5);<br>
                         </code>
@@ -171,10 +176,7 @@
                 <!-- Full Width -->
                 <div class="two-column-full-width">
                     <h2>Annet</h2>
-                </div>
 
-                <!-- Two Column Width -->
-                <div class="two-column">
                     <!-- Forms -->
                     <h3>Forms</h3>
                     <p>Kontaktskjemaet gjør ikke noe aktivt men er klart til å tas i bruk. Tekst og tilhørende input-felt er lenket opp mot hverandre slik at feltet aktiveres om man klikker tilhørende tekst og slik at skjermlesere vet hvilken tekst som hører til hvilket felt. I tillegg er input type i feltet for telefonnummer satt til «tel» slik at på enheter med touch-tastaturer vil det trigge tastatur-oppsett for inntasting av telefonnummer med nummerisk tastatur og "*, #, +".</p>
@@ -184,10 +186,7 @@
                             <code class="code-green-light">&lt;input</code> type="tel" id="phone" name="phone" placeholder="Ditt telefonnummer"<code class="code-green-light">&gt;</code>
                         </code>
                     </div>
-                </div>
 
-                <!-- Two Column Width -->
-                <div class="two-column">
                     <!-- Lenker -->
                     <h3>Lenker</h3>
                     <p>Nettstedet drar også nytte av lenker med ulike typer lenkemål. Det benyttes lenker med ordinært eksternmål, internlenker til andre sider på nettstedet og ankermål lenket til et id-element på siden, eksempelvis "til topp". Når det gjelder kontaktinformasjon er lenkene på telefonnummer satt til å trigge et oppringt til gitt nummer, epost-lenke er satt til å åpne standard epostapp med epost-adresse fylt inn, samt adresse lenket til Google Maps slik at potensielle kunder lettest mulig kan starte veibeskrivelse rett til restauranten.</p>
@@ -203,6 +202,16 @@
                             <code class="code-green-light">&lt;a</code> href="mailto:@"<code class="code-green-light">&gt;</code><code class="code-white">Epost</code><code class="code-green-light">&lt;/a&gt;</code><br>
                         </code>
                     </div>
+                </div>
+
+                <!-- Two Column Width -->
+                <div class="two-column">
+                    
+                </div>
+
+                <!-- Two Column Width -->
+                <div class="two-column">
+                    
                 </div>
             </section>
 

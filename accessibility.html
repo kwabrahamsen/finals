@@ -82,13 +82,16 @@
 
                 <!-- Two Column -->
                 <div class="two-column">
+                    <!-- Kontrastnivå -->
                     <h3>Kontrastnivå</h3>
                     <p>Ifølge w3schools som refererer til Apple, anbefales det en kontrastrate på minimum 4.5, helst 7. Dette nettstedet scorer 8.59.</p>
                     <img id="code-image-2" src="img/code-2.png" alt="Skjermdump fra automatisk test av kontrastnivå">
                    
+                    <!-- Bilder -->
                     <h3>Bilder</h3>
                     <p>Alternativ tekst er også oppgitt på bilder som ikke er overskriftsbilder, men som er del av innholdet, og disse bildene er også hentet med html i stedet for css slik at de blir lastet selv om webklienten ikke laster styles.</p>
                     
+                    <!-- Struktur -->
                     <h3>Struktur</h3>
                     <p>Siden er strukturert etter hovedelementene header, main og footer, deretter inndelt etter med nav, section og hierarkiske headers.</p>
                     <div class="code-block-dark">
@@ -114,6 +117,7 @@
 
                 <!-- Full Width -->
                 <div class="two-column-full-width">
+                    <!-- Responsivitet -->
                     <h3>Responsivitet</h3>
                     <p>Hva gjelder CSS-en så er den bygget opp «mobile first», og deretter skaleres den opp med <code class="code-red-dark">@media</code> query. Koden bryter kun på ett punkt siden det aldri er mer enn to kolonner og dermed ikke behov for ytterligere brytningspunkter. </p>
                     <div class="code-block-dark">
@@ -139,6 +143,8 @@
                             }
                         </code>
                     </div>
+
+                    <!-- Struktur av properties -->
                     <h3>Strukturering av properties</h3>
                     <p>Stylesheetet er bygget opp etter seksjoner og selvforklarende navngitte selektorer uten å dele det opp i strukturelle og visuelle deler, da jeg mener at i dette tilfellet er koden oversiktlig og kommentert nok som det er. Selektorenes properties er kategorisert som vist i kodeboksen under, og i én samlet fil.</p>
                     <div class="code-block-dark">
@@ -174,6 +180,7 @@
 
                 <!-- Two Column Width -->
                 <div class="two-column">
+                    <!-- Forms -->
                     <h3>Forms</h3>
                     <p>Kontaktskjemaet gjør ikke noe aktivt men er klart til å tas i bruk. Tekst og tilhørende input-felt er lenket opp mot hverandre slik at feltet aktiveres om man klikker tilhørende tekst og slik at skjermlesere vet hvilken tekst som hører til hvilket felt. I tillegg er input type i feltet for telefonnummer satt til «tel» slik at på enheter med touch-tastaturer vil det trigge tastatur-oppsett for inntasting av telefonnummer med nummerisk tastatur og "*, #, +".</p>
                     <div class="code-block-dark">
@@ -186,6 +193,7 @@
 
                 <!-- Two Column Width -->
                 <div class="two-column">
+                    <!-- Lenker -->
                     <h3>Lenker</h3>
                     <p>Nettstedet drar også nytte av lenker med ulike typer lenkemål. Det benyttes lenker med ordinært eksternmål, internlenker til andre sider på nettstedet og ankermål lenket til et id-element på siden, eksempelvis "til topp". Når det gjelder kontaktinformasjon er lenkene på telefonnummer satt til å trigge et oppringt til gitt nummer, epost-lenke er satt til å åpne standard epostapp med epost-adresse fylt inn, samt adresse lenket til Google Maps slik at potensielle kunder lettest mulig kan starte veibeskrivelse rett til restauranten.</p>
                     <div class="code-block-dark">
@@ -203,6 +211,15 @@
                 </div>
             </section>
 
+            <!-- Gjestereisen Section -->
+            <section class="section-light multi-column-section section-whitespace-min">
+                
+                <!-- Full Width -->
+                <div class="two-column-full-width">
+                    <h2>Gjestereisen</h2>
+                    <p>Nettsiden legger også opp en ønsket gjestereise gjennom siden med ønske om konverteringer. Fra index.html får man først opp kort info om restauranten med en minimalistisk lenke til mer informasjon. Målet er å få gjesten til å scrolle seg videre og bli overbevist av tilbakemeldinger og menyen før de presenteres med en call to action som tar dem til kontakt-skjemaet. Alle ønskede handlinger er i form av buttons, mens andre muligheter er bare enkelt lenket. Gjennom hele nettstedet vil man bli geleidet til kontaktskjemaet uansett hvilken rute man tar slik at ikke gjesten selv må oppsøke kontaktinformasjonen, men heller blir presentert den uansett klikkvalg.</p>
+                </div>
+            </section>
         </main>
 
         <!-- Footer -->
